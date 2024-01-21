@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cryptoine</title>
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png"
+		type="image/png">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<!--Header-->
+
+	<header>
+		<nav class="header">
+			<img src="Assets/image/logo.jpg"
+				class="navbar-logo" />
+			<a class="navbar-title" href="">Cryptoine </a>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div id="navbarSupportedContent menu-tab" class="navbar-wrapper">
+				<ul class="navbar-actions">
+					<li class="navbar-action-item menu-tab active" data-page='#coins'>
+						<a data-page="#coins">Coins</a>
+					</li>
+					<li class="navbar-action-item menu-tab disabled" data-page='#liveReports'>
+						<a data-page="#liveReports">Live reports</a>
+					</li>
+					<li class="navbar-action-item menu-tab" data-page='#about'>
+						<a data-page="#about">About</a>
+					</li>
+				</ul>
+				<form class="nav-form">
+					<input id="searchValue" type="search" placeholder="Search" aria-label="Search" class="form-input">
+					<button type="button" data-search-button="true" class="form-button">Search</button>
+				</form>
+			</div>
+
+			<!--Burger Menu-->
+
+			<div class="burger-navbar-wrapper">
+				<ul class="burger-navbar-actions">
+					<li class="burger-navbar-action-item menu-tab active" data-page='#coins'>
+						<a data-page="#coins">Coins</a>
+					</li>
+					<li class="burger-navbar-action-item menu-tab disabled" data-page='#liveReports'>
+						<a data-page="#liveReports">Live reports</a>
+					</li>
+					<li class="burger-navbar-action-item menu-tab" data-page='#about'>
+						<a data-page="#about">About</a>
+					</li>
+				</ul>
+				<form class="burger-nav-form">
+					<input id="searchValueBurger" type="search" placeholder="Search" aria-label="Search" class="form-input">
+					<button type="button" data-search-button="true" class="burger-form-button">Search</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+	<!--Container-->
+
+	<div class="container">
+
+		<!--CoinsTab -->
+
+		<div id="coins" class="tab activeCoinsTab"></div>
+
+		<!--LiveReportTab-->
+
+		<div id="liveReports" class="tab">
+			<div class="chart-container">
+				<canvas id="myChart" width="400" height="200">Chart</canvas>
+			</div>
+		</div>
+
+		<!--AboutTab-->
+
+		<div id="about" class="tab">
+
+		<p>
+			Welcome to my App! <br/>
+		</p>
+		<p>
+			Explore a comprehensive application that provides detailed information about digital currencies.
+		</p>
+		<p>
+			Track currency prices in dollars, euros, and shekels in real-time. Customize your experience by adding up to 5 coins to the live data chart.
+		</p>
+		<p>
+			Developed by <span>Victoria Tyshchenko</span>, a skilled front-end developer proficient in HTML, CSS, Bootstrap, JavaScript.
+		</p>
+		<p>
+			For any inquiries, feel free to reach out to me at <a href="mailto:vikitysh@gmail.com">vikitysh@gmail.com</a>. Enjoy tracking and stay updated!
+		</p>
+
+		</div>
+
+	</div>
+
+	<!--Modal Window-->
+
+	<div class="modal-wrapper">
+		<div class="modal">
+			<div class="modal-header">
+				Live reports enabled up to 5 coins at once.
+				Which one would you like to remove?
+				To add <span class="header-coin"></span>!
+				<div class="modal-close">&times;</div>
+			</div>
+			<hr class="modal-devider">
+			<div class="modal-body">
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="loader-wrapper">
+		<div class="loader"></div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
